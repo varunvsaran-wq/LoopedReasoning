@@ -1,0 +1,9 @@
+condition: condition_f
+predictions_path: outputs/eval_condition_f/gsm8k_predictions.jsonl
+output_dir: outputs/eval_condition_f
+prompt_format: two_pass
+
+model: claude-haiku-4-5
+num_samples: 100
+seed: 42
+sleep_between: 0.3

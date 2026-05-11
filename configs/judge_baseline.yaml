@@ -1,0 +1,9 @@
+condition: baseline
+predictions_path: outputs/eval_baseline/gsm8k_predictions.jsonl
+output_dir: outputs/eval_baseline
+prompt_format: single_pass
+
+model: claude-haiku-4-5
+num_samples: 100
+seed: 42
+sleep_between: 0.3
