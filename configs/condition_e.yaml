@@ -1,0 +1,25 @@
+model_id: Qwen/Qwen2.5-1.5B-Instruct
+data_path: data/stitched/condition_e.jsonl
+output_dir: outputs/condition_e
+seed: 42
+
+question_field: question
+loop_trace_field: loop_trace
+
+lora:
+  rank: 16
+  alpha: 32
+  dropout: 0.05
+  target_modules: [q_proj, k_proj, v_proj, o_proj]
+
+training:
+  epochs: 3
+  # 24GB GPU (A10G): batch 2, accum 8
+  # 16GB GPU: set batch to 1, accum to 16
+  per_device_batch_size: 2
+  gradient_accumulation: 8
+  learning_rate: 2e-4
+  scheduler: cosine
+  warmup_ratio: 0.05
+  max_seq_length: 1024
+  logging_steps: 10
