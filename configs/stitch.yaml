@@ -1,0 +1,11 @@
+# Output of collect.py
+input_path: data/drafts_raw.jsonl
+
+# Directory to write condition_e.jsonl and condition_f.jsonl
+output_dir: data/stitched
+
+# Field names in your Part 1 JSONL records — adjust if yours differ
+question_field: question
+cot_field: reasoning_trace
+teacher_answer_field: teacher_answer
+gt_answer_field: gt_answer
