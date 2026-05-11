@@ -1,0 +1,18 @@
+# Path to your Part 1 filtered traces (JSONL)
+input_path: data/part1_traces.jsonl
+
+# Output path for draft-augmented records
+output_path: data/drafts_raw.jsonl
+
+# Haiku model
+model: claude-haiku-4-5
+
+# Max tokens for draft generation (shorter than full traces)
+max_tokens: 200
+
+# Seconds between API calls — keep low, Haiku rate limits are generous
+sleep_between: 0.3
+
+# Field name for the question in your Part 1 JSONL records
+# Change this if your records use a different key (e.g. "problem", "input")
+question_field: question

@@ -1,0 +1,9 @@
+anthropic
+transformers
+peft
+trl
+bitsandbytes
+accelerate
+datasets
+pyyaml
+tqdm
