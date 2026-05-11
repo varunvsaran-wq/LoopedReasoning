@@ -1,0 +1,18 @@
+condition: condition_e
+model_id: Qwen/Qwen2.5-1.5B-Instruct
+adapter_path: outputs/condition_e
+
+prompt_format: two_pass
+output_dir: outputs/eval_condition_e
+batch_size: 4
+
+gsm8k:
+  max_new_tokens: 512  # longer to accommodate two-pass output
+
+bbh:
+  max_new_tokens: 256
+  tasks:
+    - multistep_arithmetic_two
+    - logical_deduction_five_objects
+    - word_sorting
+    - causal_judgement

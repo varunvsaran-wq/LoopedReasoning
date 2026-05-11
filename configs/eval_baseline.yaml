@@ -1,0 +1,18 @@
+condition: baseline
+model_id: Qwen/Qwen2.5-1.5B-Instruct
+adapter_path: null  # no adapter — untuned baseline
+
+prompt_format: single_pass
+output_dir: outputs/eval_baseline
+batch_size: 4
+
+gsm8k:
+  max_new_tokens: 256
+
+bbh:
+  max_new_tokens: 256
+  tasks:
+    - multistep_arithmetic_two
+    - logical_deduction_five_objects
+    - word_sorting
+    - causal_judgement
