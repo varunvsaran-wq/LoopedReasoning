@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\varun\\\\Desktop\\\\LoopedReasoning\" -Recurse -Force)",
+      "Bash(Select-Object FullName)",
+      "Bash(git config *)"
+    ]
+  }
+}
